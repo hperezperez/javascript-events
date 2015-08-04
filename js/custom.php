@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<script type="text/javascript" src="js/foo.js"></scrip>
+		<script type="text/javascript" src="js/foo.js"></script>
 		<!-- Bootstrap Latest compiled and minified CSS -->
 	<link type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 
@@ -40,10 +40,19 @@
  * change background color
  **/
 
-	function changeBackground (color){
-	document.body.style.background=color;
-	<BODY on load="changeBackground('red')"
 }
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("p").mouseover(function(){
+				$("p").css("background-color", "yellow");
+			});
+			$("p").mouseout(function(){
+				$("p").css("background-color", "lightgray");
+			});
+		});
+	</script>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tristique risus. Nam rhoncus lacinia eros et tristique. Curabitur faucibus, quam sit amet placerat hendrerit, eros mi pretium metus, et posuere lectus diam mollis nisi. Curabitur pretium mollis cursus. Etiam quis lobortis massa, et ornare mi. Nunc vitae magna ipsum. Donec vulputate magna non laoreet accumsan. Sed sit amet tellus ac risus ultrices ullamcorper non eget purus. Etiam at pellentesque velit. Phasellus sagittis quam in erat fringilla posuere. Donec luctus, nisl at gravida finibus, sem diam pharetra erat, sed mattis enim urna vel elit. Curabitur accumsan dolor at est egestas finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 	Nullam mattis in purus nec posuere. Quisque semper tellus in bibendum volutpat. Aliquam ut eros porta, placerat sem non, facilisis lorem. Phasellus vitae viverra nisi. Quisque feugiat, dolor quis blandit pharetra, velit dolor ultrices metus, a finibus metus neque eget enim. Proin venenatis metus vitae interdum accumsan. Morbi at arcu tortor. Curabitur sapien justo, lobortis nec eleifend id, consequat a turpis.
@@ -53,4 +62,15 @@
 	Aenean tempor sodales nulla vel scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus, ipsum ut fringilla suscipit, eros tortor laoreet neque, quis bibendum mi velit id eros. Integer sit amet lacinia nunc. Aenean eu purus sollicitudin, hendrerit enim ac, vulputate mauris. Nam in fermentum neque, varius condimentum tellus. Integer hendrerit luctus lorem ut efficitur. Nam convallis pretium justo, a dictum dui pretium et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac libero nulla. Nullam varius varius lectus non mollis. Praesent molestie tristique nisl non lacinia. Phasellus nec sem et risus volutpat luctus. Etiam eget diam tincidunt, lacinia lorem sollicitudin, ultrices velit. Praesent nec malesuada metus, sit amet feugiat mi.
 
 	Mauris ex risus, fermentum id dictum quis, scelerisque ut orci. Maecenas in auctor felis, sed ullamcorper massa. Donec id pharetra odio, sit amet cursus nisi. Donec dolor lacus, molestie at vehicula vestibulum, laoreet ut augue. Aliquam accumsan fermentum luctus. Quisque ante leo, auctor sed mi sed, imperdiet tincidunt dolor. In lacinia ligula ac eros suscipit condimentum. </p>Duis malesuada sem ac maximus facilisis. Curabitur diam ligula, accumsan vitae ex ut, auctor lobortis erat. Sed facilisis tortor vitae conse</body>
+
+	<h1 id="myHeader">estos son los versos de los Laureles!</h1>
+	<button onclick="displayResult()">Change text</button>
+
+	<script>
+		function displayResult() {
+			document.getElementById("myHeader").innerHTML = " Estoy aprendiendo muchas cosas!";
+		}
+	</script>
+
+
 </html>
